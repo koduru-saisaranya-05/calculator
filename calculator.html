@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 2px black solid;
+        }
+        .calci{
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
+        .mode{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .button{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            text-align: center;
+            gap: 20px;
+            padding: 10px;
+        }
+        .button div{
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            font-style: 20px;
+            font-weight: 400 ;
+
+        }
+    </style>
+</head>
+<body>
+    <div><u>CALCULATOR</u></div>
+    <div class="calci" id="calci">
+        <div class="input" id="input">
+            <div class="mode" id="mode"> </div> 
+            <div class="typed" id="typed">546462</div>
+            <div class="typing" id="typing">654654</div> 
+        </div>
+        <div class="button">
+            <div id="clear" onclick="document.getElementById("typing").innerHTML
+            
+            
+            ='0'">C</div>
+            <div id="modul0" onclick="click('%')">%</div>
+            <div id="back">CE</div>
+            <div id="divide" onclick="clik('/')">/</div>
+            <div id="seven" onclick="clik('7')">7</div>
+            <div id="eight" onclick="clik('8')">8</div>
+            <div id="nine" onclick="clik('9')">9</div>
+            <div id="multiply" onclick="clik('X')">X</div>
+            <div id="four" onclick="clik('4')">4</div>
+            <div id="five" onclick="clik('5')">5</div>
+            <div id="six" onclick="clik('6')">6</div>
+            <div id="minus" onclick="clik('-')">-</div>
+            <div id="one" onclick="clik('2')">1</div>
+            <div id="two" onclick="clik('2')">2</div>
+            <div id="three" onclick="clik('3')">3</div>
+            <div id="plus" onclick="clik('+')">+</div>
+            <div id="dublezero" onclick="clik('00')">00</div>
+            <div id="zero" onclick="clik('0')">0</div>
+            <div id="decimal" onclick="clik('.')">.</div>
+            <div id="equal">=</div>
+
+            
+
+        </div>
+     </div>
+</body>
+<script>
+    function clik(param){
+        if (document.getElementById("typed").innerHTML == ' ' || document.getElementById("typing").innerHTML == '0')
+        document.getElementById("typing").innerHTML = param;
+        document.getElementById("typed").innerHTML = param;
+
+
+    }
+</script>
+</html>
